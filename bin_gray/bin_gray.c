@@ -17,7 +17,7 @@ struct data{
 };
 
 
-struct data* get_args(int, char*[]);
+struct data *get_args(int, char*[]);
 void encode(struct data*);
 double decode(struct data*);
 
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
 
 
-struct data* get_args(int argc, char *argv[])
+struct data *get_args(int argc, char *argv[])
 {
     struct data *d;
 
@@ -60,7 +60,7 @@ struct data* get_args(int argc, char *argv[])
     }
 
     if( (d = (struct data*)malloc(sizeof(struct data))) == NULL ){
-        printf("Cannot secure meory.\n");
+        printf("Memory allocation is failed.\n");
         exit(EXIT_FAILURE);
     }
 
@@ -79,7 +79,7 @@ struct data* get_args(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     if( (d->xs = (int*)malloc(sizeof(int)*(d->len))) == NULL ){
-        printf("Cannot secure memory.\n");
+        printf("Memory allocation is failed.\n");
         exit(EXIT_FAILURE);
     }
 
